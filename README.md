@@ -9,7 +9,7 @@
 ## 🌐 Live Demo
 **[▶ Try the app on Hugging Face Spaces](https://huggingface.co/spaces/harshith68/Patient-Readmission-Risk)**  
 Enter patient clinical parameters and get an instant 30-day readmission
-risk score with a SHAP waterfall explanation — no setup required.
+risk score with a SHAP waterfall explanation   No setup required.
 
 ---
 
@@ -22,7 +22,7 @@ hospital within 30 days of discharge. This was built on the UCI Diabetes
 across 130 US hospitals from 1999 to 2008.
 
 The goal is to give clinical teams an interpretable, evidence-backed
-tool to identify high-risk patients before discharge — enabling
+tool to identify high-risk patients before discharge   enabling
 proactive intervention and reducing preventable readmissions.
 
 ---
