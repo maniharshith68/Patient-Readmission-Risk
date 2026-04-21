@@ -1,0 +1,54 @@
+# 🏥 Patient Readmission Risk Modeling
+
+A production-scale, end-to-end machine learning pipeline that predicts 30-day hospital readmission risk for diabetic patients using the UCI Diabetes 130-US Hospitals dataset (101,766 records).
+
+## 🎯 Project Highlights
+- **SQL Cohort Profiling** — 10 clinical readmission queries via SQLite
+- **Feature Engineering** — ICD-9 bucketing, medication change scoring, SMOTE balancing
+- **Gradient Boosted Classifier** — XGBoost with stratified cross-validation
+- **Hypothesis Testing** — Chi-square & t-tests on key risk factors
+- **Explainability** — SHAP (global + local) + LIME (patient-level)
+- **Clinical Report** — Auto-generated PDF with confusion matrix, SHAP plots, recommendations
+
+## 🗂️ Project Structure
+```
+patient-readmission-risk/
+├── config/           # YAML configuration
+├── data/             # Raw + processed data (gitignored)
+├── logs/             # Per-module rotating logs (gitignored)
+├── reports/          # SQL profiling, figures, clinical PDF
+├── src/
+│   ├── ingestion/    # Data download + SQL profiling
+│   ├── features/     # Feature engineering + SMOTE
+│   ├── modeling/     # XGBoost training + hypothesis tests
+│   ├── explainability/ # SHAP + LIME
+│   ├── reporting/    # Clinical PDF report
+│   └── utils/        # Logger
+├── tests/            # Pytest test suite
+└── main.py           # Full pipeline orchestrator
+```
+
+## ⚙️ Setup & Run
+
+```bash
+# Install dependencies
+pip3 install -r requirements.txt --break-system-packages
+
+# Run full pipeline
+python3 main.py
+
+# Run tests
+pytest tests/ -v
+```
+
+## 🛠️ Tech Stack
+- **Python 3.14** | **XGBoost** | **scikit-learn** | **imbalanced-learn (SMOTE)**
+- **SHAP** | **LIME** | **SciPy** | **SQLite** | **ReportLab**
+- **pandas** | **matplotlib** | **seaborn**
+
+## 📊 Dataset
+UCI ML Repository — [Diabetes 130-US Hospitals (1999–2008)](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008)
+101,766 records | 47 features | Target: 30-day readmission
+
+## 📁 Data
+Raw data is not committed. Run `python3 main.py` to auto-download from UCI.

@@ -1,0 +1,24 @@
+# Data (never commit raw patient data)
+data/raw/
+data/processed/
+
+# Logs
+logs/
+
+# Reports output
+reports/clinical/
+reports/figures/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.egg-info/
+dist/
+build/
+
+# Env
+.env
+venv/
+.venv/
