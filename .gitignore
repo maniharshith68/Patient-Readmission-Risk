@@ -25,3 +25,6 @@ build/
 .env
 venv/
 .venv/
+
+# Hugging Face Space
+hf_space/
