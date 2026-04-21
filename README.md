@@ -46,6 +46,18 @@ pytest tests/ -v
 - **SHAP** | **LIME** | **SciPy** | **SQLite** | **ReportLab**
 - **pandas** | **matplotlib** | **seaborn**
 
+
+## 📈 Sample EDA Outputs
+
+| Class Distribution | Readmission by Age |
+|---|---|
+| ![](reports/figures/eda_class_distribution.png) | ![](reports/figures/eda_age_distribution.png) |
+
+| Readmission vs Hospital Stay | Readmission vs Prior Visits |
+|---|---|
+| ![](reports/figures/eda_readmit_by_time.png) | ![](reports/figures/eda_readmit_by_inpatient.png) |
+
+
 ## 📊 Dataset
 UCI ML Repository — [Diabetes 130-US Hospitals (1999–2008)](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008)
 101,766 records | 47 features | Target: 30-day readmission

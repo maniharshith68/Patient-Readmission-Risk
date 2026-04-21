@@ -7,7 +7,7 @@ logs/
 
 # Reports output
 reports/clinical/
-reports/figures/
+
 
 # Python
 __pycache__/
