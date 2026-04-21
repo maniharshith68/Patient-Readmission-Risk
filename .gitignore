@@ -2,6 +2,9 @@
 data/raw/
 data/processed/
 
+# Models
+models/
+
 # Logs
 logs/
 

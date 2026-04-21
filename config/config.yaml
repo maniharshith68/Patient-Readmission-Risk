@@ -15,12 +15,17 @@ data:
 
 model:
   name: "xgboost"
-  n_estimators: 300
-  max_depth: 6
+  n_estimators: 400
+  max_depth: 5
   learning_rate: 0.05
-  scale_pos_weight: 2.5
+  scale_pos_weight: 8        # ratio of negatives:positives (90409/11357 ≈ 8)
+  subsample: 0.8
+  colsample_bytree: 0.8
+  min_child_weight: 5
+  classification_threshold: 0.35
 
 smote:
+  enabled: false             # disabled — using scale_pos_weight instead
   sampling_strategy: "auto"
   k_neighbors: 5
 

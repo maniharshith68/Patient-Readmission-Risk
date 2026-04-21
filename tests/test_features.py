@@ -46,12 +46,12 @@ def test_feature_column_alignment(splits):
         "Column mismatch between X_train and X_test"
 
 
-def test_smote_balance(splits):
-    """After SMOTE, training classes must be balanced (ratio between 0.8 and 1.25)."""
-    y = splits["y_train"]["readmitted"]
-    ratio = y.value_counts()[1] / y.value_counts()[0]
-    assert 0.8 <= ratio <= 1.25, \
-        f"SMOTE balance ratio out of range: {ratio:.3f}"
+def test_train_class_ratio(splits):
+    """Training set must preserve original imbalance (not SMOTE-balanced)."""
+    y    = splits["y_train"]["readmitted"]
+    pct  = y.sum() / len(y)
+    assert 0.08 <= pct <= 0.15, \
+        f"Unexpected train class ratio: {pct:.3f} — expected ~0.11"
 
 
 def test_test_set_untouched(splits):
