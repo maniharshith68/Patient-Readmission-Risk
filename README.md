@@ -1,12 +1,13 @@
+# 🏥 Patient Readmission Risk with Explainability Report
+
+A production-scale, end-to-end machine learning pipeline that predicts 30-day hospital readmission risk for diabetic patients using the UCI Diabetes 130-US Hospitals dataset (101,766 records).
+
+
 ## 🌐 Live Demo
 **[▶ Try the live Gradio app on Hugging Face Spaces](https://huggingface.co/spaces/harshith68/Patient-Readmission-Risk)**
 
 > Enter patient clinical parameters → get 30-day readmission risk score + SHAP explanation
 
-
-# 🏥 Patient Readmission Risk Modeling
-
-A production-scale, end-to-end machine learning pipeline that predicts 30-day hospital readmission risk for diabetic patients using the UCI Diabetes 130-US Hospitals dataset (101,766 records).
 
 ## 🎯 Project Highlights
 - **SQL Cohort Profiling** — 10 clinical readmission queries via SQLite
@@ -97,3 +98,17 @@ UCI ML Repository — [Diabetes 130-US Hospitals (1999–2008)](https://archive.
 
 ## 📁 Data
 Raw data is not committed. Run `python3 main.py` to auto-download from UCI.
+
+
+
+---
+
+## Collaboration and Acknowledgements
+This project was built and developed in collaboration with [Shruti Kumari](https://github.com/shrutisurya108).
+
+
+## 👤 Authors
+- [Harshith Bhattaram](https://github.com/maniharshith68)
+- [Shruti Kumari](https://github.com/shrutisurya108)
+
+
