@@ -10,6 +10,33 @@ A production-scale, end-to-end machine learning pipeline that predicts 30-day ho
 - **Explainability** — SHAP (global + local) + LIME (patient-level)
 - **Clinical Report** — Auto-generated PDF with confusion matrix, SHAP plots, recommendations
 
+
+## 🚀 Run Full Pipeline
+
+```bash
+# Install dependencies
+pip3 install -r requirements.txt --break-system-packages
+
+# Run complete pipeline (downloads data, trains model, generates report)
+python3 main.py
+
+# Run test suite
+pytest tests/ -v
+```
+
+## 🗺️ Pipeline Architecture
+
+```
+main.py
+  ├── [1] src/ingestion/load_data.py   → UCI download + SQLite profiling
+  ├── [2] src/ingestion/eda.py         → 8 EDA figures
+  ├── [3] src/features/engineer.py     → Feature engineering + splits
+  ├── [4] src/modeling/train.py        → XGBoost + hypothesis tests
+  ├── [5] src/explainability/explain.py→ SHAP + LIME
+  └── [6] src/reporting/report.py      → Clinical PDF report
+```
+
+
 ## 🗂️ Project Structure
 ```
 patient-readmission-risk/
