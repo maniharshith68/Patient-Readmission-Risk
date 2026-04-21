@@ -1,3 +1,9 @@
+## 🌐 Live Demo
+**[▶ Try the live Gradio app on Hugging Face Spaces](https://huggingface.co/spaces/harshith68/Patient-Readmission-Risk)**
+
+> Enter patient clinical parameters → get 30-day readmission risk score + SHAP explanation
+
+
 # 🏥 Patient Readmission Risk Modeling
 
 A production-scale, end-to-end machine learning pipeline that predicts 30-day hospital readmission risk for diabetic patients using the UCI Diabetes 130-US Hospitals dataset (101,766 records).
